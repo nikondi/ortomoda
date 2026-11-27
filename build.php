@@ -6,6 +6,7 @@ use Engine\Router;
 require_once __DIR__ . '/vendor/autoload.php';
 
 const DIST_PATH = __DIR__ . '/dist';
+const DEMO_PATH = __DIR__ . '/demo';
 const BUILD = 1;
 
 include BASE_PATH . '/routes.php';
@@ -178,6 +179,13 @@ if (isset($my_args['zip'])) {
 
     if (createZip(DIST_PATH, $filename))
         console_print("Compressing done", 'green');
+}
+
+if (isset($my_args['demo'])) {
+    console_print("\n==== Copy to demo dir ====", 'yellow');
+
+    console_print("Dest: " . DEMO_PATH, 'blue');
+    rcopy(DIST_PATH, DEMO_PATH);
 }
 
 console_print("\nDone.", 'green');
