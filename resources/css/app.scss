@@ -1,0 +1,22 @@
+@forward "partials/normalize";
+@forward "partials/reset";
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #34312F;
+}
+
+body.ohidden {
+  height: 100vh;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1360px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
