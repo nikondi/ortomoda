@@ -6,7 +6,7 @@ use Engine\Router;
 require_once __DIR__ . '/vendor/autoload.php';
 
 const DIST_PATH = __DIR__ . '/dist';
-const DEMO_PATH = __DIR__ . '/demo';
+const DEMO_PATH = __DIR__ . '/docs';
 const BUILD = 1;
 
 include BASE_PATH . '/routes.php';
